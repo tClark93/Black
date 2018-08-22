@@ -1,0 +1,35 @@
+<div *ngIf="editPet">
+    <h2>Edit</h2>
+    <form (submit)="edit()">
+      <div class="formCat">  
+        <h4>Name: <span class="warn" *ngIf="errName">{{errName}}</span></h4> 
+        <input type="text" [(ngModel)]="editPet.name" name="editPet.name">
+      </div>
+      <div class="formCat">  
+        <h4>Species: <span class="warn" *ngIf="errSpec">{{errSpec}}</span></h4> 
+        <input type="text" [(ngModel)]="editPet.species" name="editPet.species">
+      </div>
+      <div class="formCat">  
+        <h4>Description: <span class="warn" *ngIf="errDesc">{{errDesc}}</span></h4> 
+        <textarea [(ngModel)]="editPet.description" name="editPet.description"cols="30" rows="10"></textarea>
+      </div>
+      <div class="formCat">  
+        <h4>Skill (optional):  <span class="warn" *ngIf="errS1">{{errS1}}</span></h4>
+        <input type="text" [(ngModel)]="editPet.skillOne" name="editPet.skillOne">
+      </div>
+      <div class="formCat">  
+        <h4>Skill (optional):  <span class="warn" *ngIf="errS2">{{errS2}}</span></h4>
+        <input type="text" [(ngModel)]="editPet.skillTwo" name="editPet.skillTwo">
+      </div>
+      <div class="formCat">  
+        <h4>Skill (optional):  <span class="warn" *ngIf="errS3">{{errS3}}</span></h4>
+        <input type="text" [(ngModel)]="editPet.skillThree" name="editPet.skillThree">
+      </div>
+      <div class="flex">
+        <button type="submit" class="submit">Submit</button>
+        <button [routerLink]="['/pets', pet['_id']]" class="cancel">Cancel</button>
+      </div>
+    </form>
+  </div> 
+  
+  

@@ -1,0 +1,32 @@
+<h2>Add a Pet</h2>
+
+<form (submit)="create()">
+  <div class="formCat">  
+    <h4>Name: <span class="warn" *ngIf="errName">{{errName}}</span></h4> 
+    <input type="text" [(ngModel)]="newPet.name" name="newPet.name">
+  </div>
+  <div class="formCat">  
+    <h4>Species: <span class="warn" *ngIf="errSpec">{{errSpec}}</span></h4> 
+    <input type="text" [(ngModel)]="newPet.species" name="newPet.species">
+  </div>
+  <div class="formCat">  
+    <h4>Description: <span class="warn" *ngIf="errDesc">{{errDesc}}</span></h4> 
+    <textarea [(ngModel)]="newPet.description" name="newPet.description"cols="30" rows="10"></textarea>
+  </div>
+  <div class="formCat">  
+    <h4>Skill (optional):  <span class="warn" *ngIf="errS1">{{errS1}}</span></h4>
+    <input type="text" [(ngModel)]="newPet.skillOne" name="newPet.skillOne">
+  </div>
+  <div class="formCat">  
+    <h4>Skill (optional):  <span class="warn" *ngIf="errS2">{{errS2}}</span></h4>
+    <input type="text" [(ngModel)]="newPet.skillTwo" name="newPet.skillTwo">
+  </div>
+  <div class="formCat">  
+    <h4>Skill (optional):  <span class="warn" *ngIf="errS3">{{errS3}}</span></h4>
+    <input type="text" [(ngModel)]="newPet.skillThree" name="newPet.skillThree">
+  </div>
+  <div class="flex">
+    <button type="submit" class="submit">Submit</button>
+    <button [routerLink]="['/pets']" class="cancel">Cancel</button>
+  </div>
+</form>

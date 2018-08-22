@@ -1,0 +1,50 @@
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 25px;
+}
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+input{
+    width: 100%;
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    border-radius: 5px;
+}
+textarea{
+    width: 100%;
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10pt;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+.submit{
+    border: 1px solid green;
+    color: green;
+}
+.cancel{
+    border: 1px solid red;
+    color: red;
+}
+.warn{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    margin-left: 5px;
+    font-size: 10pt;
+}

@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Species</th> 
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let pet of pets | orderBy : 'species' : true;">
+    <td>{{ pet['name'] }}</td>
+    <td>{{ pet['species'] }}</td> 
+    <td>
+      <div class="flex">
+        <button [routerLink]="['/pets', pet['_id']]" class="read">Details</button>
+        <button [routerLink]="['/edit', pet['_id']]" class="edit">Update</button>
+      </div>
+    </td>
+  </tr>
+</table>

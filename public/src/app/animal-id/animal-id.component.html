@@ -1,0 +1,19 @@
+<div *ngIf="pet" class="all">
+  <h1>{{pet['name']}}</h1>
+  <h3>Species: {{pet['species']}}</h3>
+  <h3>Description: <span class="text">{{pet['description']}}</span></h3>
+  <h3>Skills:</h3>
+  <ul>
+    <li *ngIf="pet['skillOne']">{{pet['skillOne']}}</li>
+    <li *ngIf="pet['skillTwo']">{{pet['skillTwo']}}</li>
+    <li *ngIf="pet['skillThree']">{{pet['skillThree']}}</li>
+  </ul>
+  <h3>Likes: <span class="text">{{pet['likes']}}</span></h3>
+  <div class="links">
+    <form (submit)="like()">
+      <input type="hidden" [(ngModel)]="pet.likes" name="pet.likes">
+      <button [disabled]="flag" class="like" type="submit">Like {{pet['name']}}</button>
+    </form>
+    <button class="adopt" (click)="adopt(pet['_id'])">Adopt {{pet['name']}}</button>
+  </div>
+</div>
